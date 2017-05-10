@@ -1,4 +1,3 @@
-{%- if 'monitor_master' in salt['grains.get']('roles', []) %}
 include:
   - graphite.supervisor
 
@@ -190,4 +189,3 @@ nginx:
     - watch:
       - file: /etc/nginx/conf.d/graphite.conf
 
-{%- endif %}
